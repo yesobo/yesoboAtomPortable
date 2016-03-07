@@ -1,0 +1,25 @@
+'.source.js':
+  'ngController':
+    'prefix': 'ngcontroller'
+    'body': """
+      (function() {
+          'use strict';
+
+          angular
+              .module('${1:module}')
+              .controller('${2:Controller}', ${2:Controller});
+
+          ${2:Controller}.$inject = ['${3:dependencies}'];
+
+          /* @ngInject */
+          function ${2:Controller}(${3:dependencies}) {
+              var vm = this;
+
+              activate();
+
+              function activate() {
+
+              }
+          }
+      })();
+    """
