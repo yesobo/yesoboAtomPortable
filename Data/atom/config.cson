@@ -2,6 +2,7 @@
   core: {}
   editor:
     invisibles: {}
+    tabLength: 4
   "exception-reporting":
     userId: "03c5a082-84e5-e48e-2d93-060ba74478e1"
   welcome:
