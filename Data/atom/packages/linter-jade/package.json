@@ -1,0 +1,1572 @@
+{
+  "name": "linter-jade",
+  "main": "./lib/jade",
+  "version": "0.3.2",
+  "description": "Basic Jade linter",
+  "keywords": [
+    "jade",
+    "lint",
+    "linter"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyklus/atom-linter-jade.git"
+  },
+  "license": "Unlicense",
+  "engines": {
+    "atom": ">=1.0.0 <2.0.0"
+  },
+  "dependencies": {
+    "jade": "^1.11.0",
+    "jade-lint": "^1.2.6",
+    "jadelint": "^0.2.6",
+    "loophole": "^1.1.0"
+  },
+  "providedServices": {
+    "linter": {
+      "versions": {
+        "1.0.0": "provideLinter"
+      }
+    }
+  },
+  "readme": "# linter-jade package\n\nA jade linter that uses three linters (because at the moment they provide different errors and\nwarnings :/)\n\n- the official jade compiler\n- [jade-lint](https://github.com/benedfit/jade-lint) jade-lint is a new project and isn't feature\n  complete yet, so the compiler catches some errors that it doesn't.  Options are configured via a\n  `.jade-lintrc` file\n- [jadelint](https://github.com/rrdelaney/jadelint) Same issue as above.  Options via a\n  `.jadelintrc` file ([docs](http://ryandelaney.io/jadelint/))\n\nThe naming between the two linters isn't exactly helpful!  I plan to remove the compiler whenever\nthat is possible\n\n## Installation\nLinter package must be installed in order to use this plugin. If Linter is not installed, please\nfollow the instructions [here](https://github.com/AtomLinter/Linter).\n\n### Plugin installation\n```\n$ apm install linter-jade\n```\n\n## Settings\n\nNone at the moment :/  File issues if you want new features ;)  If anyone has any ideas as to how to\nproperly \"lint\" jade, also let me know, as the default lexer/tokenizer just throw the first error\nand it's not always useful output.\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/zyklus/atom-linter-jade/issues"
+  },
+  "homepage": "https://github.com/zyklus/atom-linter-jade#readme",
+  "_id": "linter-jade@0.3.2",
+  "_shasum": "12ae9c331ca1c40cefe3b7033dfe68e425497a6d",
+  "_resolved": "file:..\\d-116411-7460-m5vj7i\\package.tgz",
+  "_from": "..\\d-116411-7460-m5vj7i\\package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [
+      {
+        "name": "jade",
+        "version": "1.11.0",
+        "path": "node_modules\\jade\\lib\\index.js"
+      },
+      {
+        "name": "character-parser",
+        "version": "1.2.1",
+        "path": "node_modules\\jade\\node_modules\\character-parser\\index.js"
+      },
+      {
+        "name": "clean-css",
+        "version": "3.4.12",
+        "path": "node_modules\\jade\\node_modules\\clean-css\\index.js"
+      },
+      {
+        "name": "commander",
+        "version": "2.8.1",
+        "path": "node_modules\\jade\\node_modules\\clean-css\\node_modules\\commander\\index.js"
+      },
+      {
+        "name": "graceful-readlink",
+        "version": "1.0.1",
+        "path": "node_modules\\jade\\node_modules\\clean-css\\node_modules\\commander\\node_modules\\graceful-readlink\\index.js"
+      },
+      {
+        "name": "source-map",
+        "version": "0.4.4",
+        "path": "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\lib\\source-map.js"
+      },
+      {
+        "name": "amdefine",
+        "version": "1.0.0",
+        "path": "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\node_modules\\amdefine\\amdefine.js"
+      },
+      {
+        "name": "commander",
+        "version": "2.6.0",
+        "path": "node_modules\\jade\\node_modules\\commander\\index.js"
+      },
+      {
+        "name": "constantinople",
+        "version": "3.0.2",
+        "path": "node_modules\\jade\\node_modules\\constantinople\\index.js"
+      },
+      {
+        "name": "acorn",
+        "version": "2.7.0",
+        "path": "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\dist\\acorn.js"
+      },
+      {
+        "name": "jstransformer",
+        "version": "0.0.2",
+        "path": "node_modules\\jade\\node_modules\\jstransformer\\index.js"
+      },
+      {
+        "name": "is-promise",
+        "version": "2.1.0",
+        "path": "node_modules\\jade\\node_modules\\jstransformer\\node_modules\\is-promise\\index.js"
+      },
+      {
+        "name": "promise",
+        "version": "6.1.0",
+        "path": "node_modules\\jade\\node_modules\\jstransformer\\node_modules\\promise\\index.js"
+      },
+      {
+        "name": "asap",
+        "version": "1.0.0",
+        "path": "node_modules\\jade\\node_modules\\jstransformer\\node_modules\\promise\\node_modules\\asap\\asap.js"
+      },
+      {
+        "name": "mkdirp",
+        "version": "0.5.1",
+        "path": "node_modules\\jade\\node_modules\\mkdirp\\index.js"
+      },
+      {
+        "name": "minimist",
+        "version": "0.0.8",
+        "path": "node_modules\\jade\\node_modules\\mkdirp\\node_modules\\minimist\\index.js"
+      },
+      {
+        "name": "transformers",
+        "version": "2.1.0",
+        "path": "node_modules\\jade\\node_modules\\transformers\\lib\\transformers.js"
+      },
+      {
+        "name": "css",
+        "version": "1.0.8",
+        "path": "node_modules\\jade\\node_modules\\transformers\\node_modules\\css\\index.js"
+      },
+      {
+        "name": "css-parse",
+        "version": "1.0.4",
+        "path": "node_modules\\jade\\node_modules\\transformers\\node_modules\\css\\node_modules\\css-parse\\index.js"
+      },
+      {
+        "name": "css-stringify",
+        "version": "1.0.5",
+        "path": "node_modules\\jade\\node_modules\\transformers\\node_modules\\css\\node_modules\\css-stringify\\index.js"
+      },
+      {
+        "name": "promise",
+        "version": "2.0.0",
+        "path": "node_modules\\jade\\node_modules\\transformers\\node_modules\\promise\\index.js"
+      },
+      {
+        "name": "is-promise",
+        "version": "1.0.1",
+        "path": "node_modules\\jade\\node_modules\\transformers\\node_modules\\promise\\node_modules\\is-promise\\index.js"
+      },
+      {
+        "name": "uglify-js",
+        "version": "2.2.5",
+        "path": "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\tools\\node.js"
+      },
+      {
+        "name": "optimist",
+        "version": "0.3.7",
+        "path": "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\index.js"
+      },
+      {
+        "name": "wordwrap",
+        "version": "0.0.3",
+        "path": "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\node_modules\\wordwrap\\index.js"
+      },
+      {
+        "name": "source-map",
+        "version": "0.1.43",
+        "path": "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\source-map.js"
+      },
+      {
+        "name": "amdefine",
+        "version": "1.0.0",
+        "path": "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\node_modules\\amdefine\\amdefine.js"
+      },
+      {
+        "name": "uglify-js",
+        "version": "2.6.2",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\tools\\node.js"
+      },
+      {
+        "name": "async",
+        "version": "0.2.10",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\async\\lib\\async.js"
+      },
+      {
+        "name": "source-map",
+        "version": "0.5.6",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\source-map\\source-map.js"
+      },
+      {
+        "name": "uglify-to-browserify",
+        "version": "1.0.2",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\uglify-to-browserify\\index.js"
+      },
+      {
+        "name": "yargs",
+        "version": "3.10.0",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\index.js"
+      },
+      {
+        "name": "camelcase",
+        "version": "1.2.1",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\camelcase\\index.js"
+      },
+      {
+        "name": "cliui",
+        "version": "2.1.0",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\index.js"
+      },
+      {
+        "name": "center-align",
+        "version": "0.1.3",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\index.js"
+      },
+      {
+        "name": "align-text",
+        "version": "0.1.4",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\node_modules\\align-text\\index.js"
+      },
+      {
+        "name": "kind-of",
+        "version": "3.0.3",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\node_modules\\align-text\\node_modules\\kind-of\\index.js"
+      },
+      {
+        "name": "is-buffer",
+        "version": "1.1.3",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\node_modules\\align-text\\node_modules\\kind-of\\node_modules\\is-buffer\\index.js"
+      },
+      {
+        "name": "longest",
+        "version": "1.0.1",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\node_modules\\align-text\\node_modules\\longest\\index.js"
+      },
+      {
+        "name": "repeat-string",
+        "version": "1.5.4",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\node_modules\\align-text\\node_modules\\repeat-string\\index.js"
+      },
+      {
+        "name": "lazy-cache",
+        "version": "1.0.4",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\node_modules\\lazy-cache\\index.js"
+      },
+      {
+        "name": "right-align",
+        "version": "0.1.3",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\right-align\\index.js"
+      },
+      {
+        "name": "align-text",
+        "version": "0.1.4",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\right-align\\node_modules\\align-text\\index.js"
+      },
+      {
+        "name": "kind-of",
+        "version": "3.0.3",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\right-align\\node_modules\\align-text\\node_modules\\kind-of\\index.js"
+      },
+      {
+        "name": "is-buffer",
+        "version": "1.1.3",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\right-align\\node_modules\\align-text\\node_modules\\kind-of\\node_modules\\is-buffer\\index.js"
+      },
+      {
+        "name": "longest",
+        "version": "1.0.1",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\right-align\\node_modules\\align-text\\node_modules\\longest\\index.js"
+      },
+      {
+        "name": "repeat-string",
+        "version": "1.5.4",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\right-align\\node_modules\\align-text\\node_modules\\repeat-string\\index.js"
+      },
+      {
+        "name": "wordwrap",
+        "version": "0.0.2",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\wordwrap\\index.js"
+      },
+      {
+        "name": "decamelize",
+        "version": "1.2.0",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\decamelize\\index.js"
+      },
+      {
+        "name": "window-size",
+        "version": "0.1.0",
+        "path": "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\window-size\\index.js"
+      },
+      {
+        "name": "void-elements",
+        "version": "2.0.1",
+        "path": "node_modules\\jade\\node_modules\\void-elements\\index.js"
+      },
+      {
+        "name": "with",
+        "version": "4.0.3",
+        "path": "node_modules\\jade\\node_modules\\with\\index.js"
+      },
+      {
+        "name": "acorn",
+        "version": "1.2.2",
+        "path": "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\dist\\acorn.js"
+      },
+      {
+        "name": "acorn-globals",
+        "version": "1.0.9",
+        "path": "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\index.js"
+      },
+      {
+        "name": "acorn",
+        "version": "2.7.0",
+        "path": "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\dist\\acorn.js"
+      },
+      {
+        "name": "jade-lint",
+        "version": "1.2.13",
+        "path": "node_modules\\jade-lint\\lib\\linter.js"
+      },
+      {
+        "name": "commander",
+        "version": "2.8.1",
+        "path": "node_modules\\jade-lint\\node_modules\\commander\\index.js"
+      },
+      {
+        "name": "graceful-readlink",
+        "version": "1.0.1",
+        "path": "node_modules\\jade-lint\\node_modules\\commander\\node_modules\\graceful-readlink\\index.js"
+      },
+      {
+        "name": "css-selector-parser",
+        "version": "1.1.0",
+        "path": "node_modules\\jade-lint\\node_modules\\css-selector-parser\\index.js"
+      },
+      {
+        "name": "glob",
+        "version": "5.0.15",
+        "path": "node_modules\\jade-lint\\node_modules\\glob\\glob.js"
+      },
+      {
+        "name": "inflight",
+        "version": "1.0.4",
+        "path": "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\inflight\\inflight.js"
+      },
+      {
+        "name": "wrappy",
+        "version": "1.0.1",
+        "path": "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\inflight\\node_modules\\wrappy\\wrappy.js"
+      },
+      {
+        "name": "inherits",
+        "version": "2.0.1",
+        "path": "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\inherits\\inherits.js"
+      },
+      {
+        "name": "once",
+        "version": "1.3.2",
+        "path": "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\once\\once.js"
+      },
+      {
+        "name": "wrappy",
+        "version": "1.0.1",
+        "path": "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\once\\node_modules\\wrappy\\wrappy.js"
+      },
+      {
+        "name": "path-is-absolute",
+        "version": "1.0.0",
+        "path": "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\path-is-absolute\\index.js"
+      },
+      {
+        "name": "jade-error",
+        "version": "1.1.1",
+        "path": "node_modules\\jade-lint\\node_modules\\jade-error\\index.js"
+      },
+      {
+        "name": "jade-lexer",
+        "version": "0.0.8",
+        "path": "node_modules\\jade-lint\\node_modules\\jade-lexer\\index.js"
+      },
+      {
+        "name": "character-parser",
+        "version": "1.2.2",
+        "path": "node_modules\\jade-lint\\node_modules\\jade-lexer\\node_modules\\character-parser\\index.js"
+      },
+      {
+        "name": "jsonminify",
+        "version": "0.2.3",
+        "path": "node_modules\\jade-lint\\node_modules\\jsonminify\\minify.json.js"
+      },
+      {
+        "name": "minimatch",
+        "version": "3.0.0",
+        "path": "node_modules\\jade-lint\\node_modules\\minimatch\\minimatch.js"
+      },
+      {
+        "name": "brace-expansion",
+        "version": "1.1.1",
+        "path": "node_modules\\jade-lint\\node_modules\\minimatch\\node_modules\\brace-expansion\\index.js"
+      },
+      {
+        "name": "balanced-match",
+        "version": "0.2.0",
+        "path": "node_modules\\jade-lint\\node_modules\\minimatch\\node_modules\\brace-expansion\\node_modules\\balanced-match\\index.js"
+      },
+      {
+        "name": "concat-map",
+        "version": "0.0.1",
+        "path": "node_modules\\jade-lint\\node_modules\\minimatch\\node_modules\\brace-expansion\\node_modules\\concat-map\\index.js"
+      },
+      {
+        "name": "void-elements",
+        "version": "2.0.1",
+        "path": "node_modules\\jade-lint\\node_modules\\void-elements\\index.js"
+      },
+      {
+        "name": "jadelint",
+        "version": "0.2.13",
+        "path": "node_modules\\jadelint\\target\\Linter.js"
+      },
+      {
+        "name": "chalk",
+        "version": "1.1.3",
+        "path": "node_modules\\jadelint\\node_modules\\chalk\\index.js"
+      },
+      {
+        "name": "ansi-styles",
+        "version": "2.2.1",
+        "path": "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\ansi-styles\\index.js"
+      },
+      {
+        "name": "escape-string-regexp",
+        "version": "1.0.5",
+        "path": "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\escape-string-regexp\\index.js"
+      },
+      {
+        "name": "has-ansi",
+        "version": "2.0.0",
+        "path": "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\has-ansi\\index.js"
+      },
+      {
+        "name": "ansi-regex",
+        "version": "2.0.0",
+        "path": "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\has-ansi\\node_modules\\ansi-regex\\index.js"
+      },
+      {
+        "name": "strip-ansi",
+        "version": "3.0.1",
+        "path": "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\strip-ansi\\index.js"
+      },
+      {
+        "name": "ansi-regex",
+        "version": "2.0.0",
+        "path": "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\strip-ansi\\node_modules\\ansi-regex\\index.js"
+      },
+      {
+        "name": "supports-color",
+        "version": "2.0.0",
+        "path": "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\supports-color\\index.js"
+      },
+      {
+        "name": "fs-readdir-recursive",
+        "version": "0.1.2",
+        "path": "node_modules\\jadelint\\node_modules\\fs-readdir-recursive\\index.js"
+      },
+      {
+        "name": "jade-lexer",
+        "version": "0.0.8",
+        "path": "node_modules\\jadelint\\node_modules\\jade-lexer\\index.js"
+      },
+      {
+        "name": "character-parser",
+        "version": "1.2.2",
+        "path": "node_modules\\jadelint\\node_modules\\jade-lexer\\node_modules\\character-parser\\index.js"
+      },
+      {
+        "name": "jade-parser",
+        "version": "0.0.8",
+        "path": "node_modules\\jadelint\\node_modules\\jade-parser\\index.js"
+      },
+      {
+        "name": "token-stream",
+        "version": "0.0.1",
+        "path": "node_modules\\jadelint\\node_modules\\jade-parser\\node_modules\\token-stream\\index.js"
+      },
+      {
+        "name": "log-symbols",
+        "version": "1.0.2",
+        "path": "node_modules\\jadelint\\node_modules\\log-symbols\\index.js"
+      },
+      {
+        "name": "text-table",
+        "version": "0.2.0",
+        "path": "node_modules\\jadelint\\node_modules\\text-table\\index.js"
+      },
+      {
+        "name": "loophole",
+        "version": "1.1.0",
+        "path": "node_modules\\loophole\\lib\\loophole.js"
+      }
+    ],
+    "extensions": {
+      ".coffee": [
+        "lib\\jade.coffee",
+        "lib\\linter-jade.coffee",
+        "lib\\linters\\jade-compiler.coffee",
+        "lib\\linters\\jade-lint.coffee",
+        "lib\\linters\\jadelint.coffee"
+      ],
+      ".json": [
+        "node_modules\\jade\\.release.json",
+        "node_modules\\jade\\component.json",
+        "node_modules\\jade\\node_modules\\character-parser\\package.json",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\commander\\node_modules\\graceful-readlink\\package.json",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\commander\\package.json",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\node_modules\\amdefine\\package.json",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\package.json",
+        "node_modules\\jade\\node_modules\\clean-css\\package.json",
+        "node_modules\\jade\\node_modules\\commander\\package.json",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\package.json",
+        "node_modules\\jade\\node_modules\\constantinople\\package.json",
+        "node_modules\\jade\\node_modules\\jstransformer\\node_modules\\is-promise\\package.json",
+        "node_modules\\jade\\node_modules\\jstransformer\\node_modules\\promise\\node_modules\\asap\\package.json",
+        "node_modules\\jade\\node_modules\\jstransformer\\node_modules\\promise\\package.json",
+        "node_modules\\jade\\node_modules\\jstransformer\\package.json",
+        "node_modules\\jade\\node_modules\\mkdirp\\node_modules\\minimist\\package.json",
+        "node_modules\\jade\\node_modules\\mkdirp\\package.json",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\css\\component.json",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\css\\node_modules\\css-parse\\component.json",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\css\\node_modules\\css-parse\\package.json",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\css\\node_modules\\css-stringify\\component.json",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\css\\node_modules\\css-stringify\\package.json",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\css\\package.json",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\promise\\node_modules\\is-promise\\package.json",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\promise\\package.json",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\node_modules\\wordwrap\\package.json",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\package.json",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\node_modules\\amdefine\\package.json",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\package.json",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\package.json",
+        "node_modules\\jade\\node_modules\\transformers\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\async\\component.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\async\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\source-map\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\uglify-to-browserify\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\camelcase\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\node_modules\\align-text\\node_modules\\kind-of\\node_modules\\is-buffer\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\node_modules\\align-text\\node_modules\\kind-of\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\node_modules\\align-text\\node_modules\\longest\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\node_modules\\align-text\\node_modules\\repeat-string\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\node_modules\\align-text\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\node_modules\\lazy-cache\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\right-align\\node_modules\\align-text\\node_modules\\kind-of\\node_modules\\is-buffer\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\right-align\\node_modules\\align-text\\node_modules\\kind-of\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\right-align\\node_modules\\align-text\\node_modules\\longest\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\right-align\\node_modules\\align-text\\node_modules\\repeat-string\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\right-align\\node_modules\\align-text\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\right-align\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\wordwrap\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\decamelize\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\window-size\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\package.json",
+        "node_modules\\jade\\node_modules\\uglify-js\\tools\\domprops.json",
+        "node_modules\\jade\\node_modules\\void-elements\\package.json",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\package.json",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\package.json",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\package.json",
+        "node_modules\\jade\\node_modules\\with\\package.json",
+        "node_modules\\jade\\package.json",
+        "node_modules\\jade-lint\\node_modules\\commander\\node_modules\\graceful-readlink\\package.json",
+        "node_modules\\jade-lint\\node_modules\\commander\\package.json",
+        "node_modules\\jade-lint\\node_modules\\css-selector-parser\\package.json",
+        "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\inflight\\node_modules\\wrappy\\package.json",
+        "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\inflight\\package.json",
+        "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\inherits\\package.json",
+        "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\once\\node_modules\\wrappy\\package.json",
+        "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\once\\package.json",
+        "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\path-is-absolute\\package.json",
+        "node_modules\\jade-lint\\node_modules\\glob\\package.json",
+        "node_modules\\jade-lint\\node_modules\\jade-error\\package.json",
+        "node_modules\\jade-lint\\node_modules\\jade-lexer\\node_modules\\character-parser\\package.json",
+        "node_modules\\jade-lint\\node_modules\\jade-lexer\\package.json",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\.jsdoc3.json",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\package.json",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\files\\minify_json_js\\report.history.json",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\files\\minify_json_js\\report.json",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\report.history.json",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\report.json",
+        "node_modules\\jade-lint\\node_modules\\minimatch\\node_modules\\brace-expansion\\node_modules\\balanced-match\\package.json",
+        "node_modules\\jade-lint\\node_modules\\minimatch\\node_modules\\brace-expansion\\node_modules\\concat-map\\package.json",
+        "node_modules\\jade-lint\\node_modules\\minimatch\\node_modules\\brace-expansion\\package.json",
+        "node_modules\\jade-lint\\node_modules\\minimatch\\package.json",
+        "node_modules\\jade-lint\\node_modules\\void-elements\\package.json",
+        "node_modules\\jade-lint\\npm-shrinkwrap.json",
+        "node_modules\\jade-lint\\package.json",
+        "node_modules\\jade-lint\\presets\\clock.json",
+        "node_modules\\jade-lint\\presets\\jadelint.json",
+        "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\ansi-styles\\package.json",
+        "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\escape-string-regexp\\package.json",
+        "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\has-ansi\\node_modules\\ansi-regex\\package.json",
+        "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\has-ansi\\package.json",
+        "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\strip-ansi\\node_modules\\ansi-regex\\package.json",
+        "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\strip-ansi\\package.json",
+        "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\supports-color\\package.json",
+        "node_modules\\jadelint\\node_modules\\chalk\\package.json",
+        "node_modules\\jadelint\\node_modules\\fs-readdir-recursive\\package.json",
+        "node_modules\\jadelint\\node_modules\\jade-lexer\\node_modules\\character-parser\\package.json",
+        "node_modules\\jadelint\\node_modules\\jade-lexer\\package.json",
+        "node_modules\\jadelint\\node_modules\\jade-parser\\node_modules\\token-stream\\package.json",
+        "node_modules\\jadelint\\node_modules\\jade-parser\\package.json",
+        "node_modules\\jadelint\\node_modules\\log-symbols\\package.json",
+        "node_modules\\jadelint\\node_modules\\text-table\\package.json",
+        "node_modules\\jadelint\\package.json",
+        "node_modules\\loophole\\package.json",
+        "package.json"
+      ],
+      ".js": [
+        "node_modules\\jade\\bin\\jade.js",
+        "node_modules\\jade\\jade.js",
+        "node_modules\\jade\\lib\\compiler.js",
+        "node_modules\\jade\\lib\\doctypes.js",
+        "node_modules\\jade\\lib\\filters-client.js",
+        "node_modules\\jade\\lib\\filters.js",
+        "node_modules\\jade\\lib\\index.js",
+        "node_modules\\jade\\lib\\inline-tags.js",
+        "node_modules\\jade\\lib\\lexer.js",
+        "node_modules\\jade\\lib\\nodes\\attrs.js",
+        "node_modules\\jade\\lib\\nodes\\block-comment.js",
+        "node_modules\\jade\\lib\\nodes\\block.js",
+        "node_modules\\jade\\lib\\nodes\\case.js",
+        "node_modules\\jade\\lib\\nodes\\code.js",
+        "node_modules\\jade\\lib\\nodes\\comment.js",
+        "node_modules\\jade\\lib\\nodes\\doctype.js",
+        "node_modules\\jade\\lib\\nodes\\each.js",
+        "node_modules\\jade\\lib\\nodes\\filter.js",
+        "node_modules\\jade\\lib\\nodes\\index.js",
+        "node_modules\\jade\\lib\\nodes\\literal.js",
+        "node_modules\\jade\\lib\\nodes\\mixin-block.js",
+        "node_modules\\jade\\lib\\nodes\\mixin.js",
+        "node_modules\\jade\\lib\\nodes\\node.js",
+        "node_modules\\jade\\lib\\nodes\\tag.js",
+        "node_modules\\jade\\lib\\nodes\\text.js",
+        "node_modules\\jade\\lib\\parser.js",
+        "node_modules\\jade\\lib\\runtime.js",
+        "node_modules\\jade\\lib\\utils.js",
+        "node_modules\\jade\\node_modules\\character-parser\\index.js",
+        "node_modules\\jade\\node_modules\\clean-css\\index.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\clean.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\colors\\hex-name-shortener.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\colors\\hsl.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\colors\\rgb.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\imports\\inliner.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\properties\\break-up.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\properties\\can-override.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\properties\\clone.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\properties\\compactable.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\properties\\every-combination.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\properties\\has-inherit.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\properties\\optimizer.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\properties\\override-compactor.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\properties\\populate-components.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\properties\\remove-unused.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\properties\\restore-from-optimizing.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\properties\\restore.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\properties\\shorthand-compactor.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\properties\\validator.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\properties\\vendor-prefixes.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\properties\\wrap-for-optimizing.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\selectors\\advanced.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\selectors\\clean-up.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\selectors\\extractor.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\selectors\\is-special.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\selectors\\merge-adjacent.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\selectors\\merge-media-queries.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\selectors\\merge-non-adjacent-by-body.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\selectors\\merge-non-adjacent-by-selector.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\selectors\\reduce-non-adjacent.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\selectors\\remove-duplicate-media-queries.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\selectors\\remove-duplicates.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\selectors\\reorderable.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\selectors\\restructure.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\selectors\\simple.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\source-maps\\track.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\stringifier\\helpers.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\stringifier\\one-time.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\stringifier\\simple.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\stringifier\\source-maps.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\text\\comments-processor.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\text\\escape-store.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\text\\expressions-processor.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\text\\free-text-processor.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\text\\urls-processor.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\tokenizer\\extract-properties.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\tokenizer\\extract-selectors.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\tokenizer\\tokenize.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\urls\\rebase.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\urls\\reduce.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\urls\\rewrite.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\utils\\clone-array.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\utils\\compatibility.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\utils\\input-source-map-tracker.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\utils\\object.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\utils\\quote-scanner.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\utils\\source-reader.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\utils\\source-tracker.js",
+        "node_modules\\jade\\node_modules\\clean-css\\lib\\utils\\split.js",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\commander\\index.js",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\commander\\node_modules\\graceful-readlink\\index.js",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\build\\assert-shim.js",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\build\\mini-require.js",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\build\\suffix-browser.js",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\build\\test-prefix.js",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\build\\test-suffix.js",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\lib\\source-map\\array-set.js",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\lib\\source-map\\base64-vlq.js",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\lib\\source-map\\base64.js",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\lib\\source-map\\binary-search.js",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\lib\\source-map\\mapping-list.js",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\lib\\source-map\\quick-sort.js",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\lib\\source-map\\source-map-consumer.js",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\lib\\source-map\\source-map-generator.js",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\lib\\source-map\\source-node.js",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\lib\\source-map\\util.js",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\lib\\source-map.js",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\node_modules\\amdefine\\amdefine.js",
+        "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\node_modules\\amdefine\\intercept.js",
+        "node_modules\\jade\\node_modules\\commander\\index.js",
+        "node_modules\\jade\\node_modules\\constantinople\\index.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\bin\\build-acorn.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\bin\\generate-identifier-regex.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\dist\\acorn.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\dist\\acorn_loose.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\dist\\walk.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\bin\\acorn.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\expression.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\identifier.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\index.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\location.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\locutil.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\loose\\acorn_loose.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\loose\\expression.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\loose\\index.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\loose\\parseutil.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\loose\\state.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\loose\\statement.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\loose\\tokenize.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\lval.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\node.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\options.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\parseutil.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\state.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\statement.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\tokencontext.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\tokenize.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\tokentype.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\util.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\walk\\index.js",
+        "node_modules\\jade\\node_modules\\constantinople\\node_modules\\acorn\\src\\whitespace.js",
+        "node_modules\\jade\\node_modules\\jstransformer\\index.js",
+        "node_modules\\jade\\node_modules\\jstransformer\\node_modules\\is-promise\\index.js",
+        "node_modules\\jade\\node_modules\\jstransformer\\node_modules\\promise\\core.js",
+        "node_modules\\jade\\node_modules\\jstransformer\\node_modules\\promise\\index.js",
+        "node_modules\\jade\\node_modules\\jstransformer\\node_modules\\promise\\lib\\core.js",
+        "node_modules\\jade\\node_modules\\jstransformer\\node_modules\\promise\\lib\\done.js",
+        "node_modules\\jade\\node_modules\\jstransformer\\node_modules\\promise\\lib\\es6-extensions.js",
+        "node_modules\\jade\\node_modules\\jstransformer\\node_modules\\promise\\lib\\node-extensions.js",
+        "node_modules\\jade\\node_modules\\jstransformer\\node_modules\\promise\\node_modules\\asap\\asap.js",
+        "node_modules\\jade\\node_modules\\jstransformer\\node_modules\\promise\\polyfill-done.js",
+        "node_modules\\jade\\node_modules\\jstransformer\\node_modules\\promise\\polyfill.js",
+        "node_modules\\jade\\node_modules\\mkdirp\\bin\\cmd.js",
+        "node_modules\\jade\\node_modules\\mkdirp\\examples\\pow.js",
+        "node_modules\\jade\\node_modules\\mkdirp\\index.js",
+        "node_modules\\jade\\node_modules\\mkdirp\\node_modules\\minimist\\example\\parse.js",
+        "node_modules\\jade\\node_modules\\mkdirp\\node_modules\\minimist\\index.js",
+        "node_modules\\jade\\node_modules\\transformers\\lib\\shared.js",
+        "node_modules\\jade\\node_modules\\transformers\\lib\\transformers.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\css\\benchmark.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\css\\index.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\css\\node_modules\\css-parse\\index.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\css\\node_modules\\css-stringify\\index.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\css\\test.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\promise\\index.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\promise\\node_modules\\is-promise\\index.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\lib\\ast.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\lib\\compress.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\lib\\mozilla-ast.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\lib\\output.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\lib\\parse.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\lib\\scope.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\lib\\sourcemap.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\lib\\transform.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\lib\\utils.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\example\\bool.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\example\\boolean_double.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\example\\boolean_single.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\example\\default_hash.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\example\\default_singles.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\example\\divide.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\example\\line_count.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\example\\line_count_options.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\example\\line_count_wrap.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\example\\nonopt.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\example\\reflect.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\example\\short.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\example\\string.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\example\\usage-options.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\example\\xup.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\index.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\node_modules\\wordwrap\\example\\center.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\node_modules\\wordwrap\\example\\meat.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\node_modules\\wordwrap\\index.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\build\\assert-shim.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\build\\mini-require.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\build\\suffix-browser.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\build\\test-prefix.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\build\\test-suffix.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\source-map\\array-set.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\source-map\\base64-vlq.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\source-map\\base64.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\source-map\\binary-search.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\source-map\\mapping-list.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\source-map\\source-map-consumer.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\source-map\\source-map-generator.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\source-map\\source-node.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\source-map\\util.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\source-map.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\Makefile.dryice.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\node_modules\\amdefine\\amdefine.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\node_modules\\amdefine\\intercept.js",
+        "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\tools\\node.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\bin\\extract-props.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\lib\\ast.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\lib\\compress.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\lib\\mozilla-ast.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\lib\\output.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\lib\\parse.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\lib\\propmangle.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\lib\\scope.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\lib\\sourcemap.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\lib\\transform.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\lib\\utils.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\async\\lib\\async.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\source-map\\dist\\source-map.debug.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\source-map\\dist\\source-map.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\source-map\\dist\\source-map.min.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\array-set.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\base64-vlq.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\base64.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\binary-search.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\mapping-list.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\quick-sort.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\source-map-consumer.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\source-map-generator.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\source-node.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\util.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\source-map\\source-map.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\uglify-to-browserify\\index.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\index.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\lib\\completion.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\lib\\parser.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\lib\\usage.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\lib\\validation.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\camelcase\\index.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\index.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\index.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\node_modules\\align-text\\index.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\node_modules\\align-text\\node_modules\\kind-of\\index.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\node_modules\\align-text\\node_modules\\kind-of\\node_modules\\is-buffer\\index.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\node_modules\\align-text\\node_modules\\longest\\index.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\node_modules\\align-text\\node_modules\\repeat-string\\index.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\node_modules\\lazy-cache\\index.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\utils.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\right-align\\index.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\right-align\\node_modules\\align-text\\index.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\right-align\\node_modules\\align-text\\node_modules\\kind-of\\index.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\right-align\\node_modules\\align-text\\node_modules\\kind-of\\node_modules\\is-buffer\\index.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\right-align\\node_modules\\align-text\\node_modules\\longest\\index.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\right-align\\node_modules\\align-text\\node_modules\\repeat-string\\index.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\wordwrap\\example\\center.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\wordwrap\\example\\meat.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\wordwrap\\index.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\decamelize\\index.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\window-size\\index.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\tools\\exports.js",
+        "node_modules\\jade\\node_modules\\uglify-js\\tools\\node.js",
+        "node_modules\\jade\\node_modules\\void-elements\\index.js",
+        "node_modules\\jade\\node_modules\\void-elements\\pre-publish.js",
+        "node_modules\\jade\\node_modules\\with\\index.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\bin\\build-acorn.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\bin\\generate-identifier-regex.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\dist\\acorn.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\dist\\acorn_csp.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\dist\\acorn_loose.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\dist\\walk.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\expression.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\identifier.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\index.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\location.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\loose\\acorn_loose.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\loose\\expression.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\loose\\index.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\loose\\parseutil.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\loose\\state.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\loose\\statement.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\loose\\tokenize.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\lval.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\node.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\options.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\parseutil.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\state.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\statement.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\tokencontext.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\tokenize.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\tokentype.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\util.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\walk\\index.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn\\src\\whitespace.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\index.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\bin\\build-acorn.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\bin\\generate-identifier-regex.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\dist\\acorn.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\dist\\acorn_loose.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\dist\\walk.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\bin\\acorn.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\expression.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\identifier.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\index.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\location.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\locutil.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\loose\\acorn_loose.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\loose\\expression.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\loose\\index.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\loose\\parseutil.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\loose\\state.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\loose\\statement.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\loose\\tokenize.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\lval.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\node.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\options.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\parseutil.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\state.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\statement.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\tokencontext.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\tokenize.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\tokentype.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\util.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\walk\\index.js",
+        "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals\\node_modules\\acorn\\src\\whitespace.js",
+        "node_modules\\jade\\release.js",
+        "node_modules\\jade\\runtime.js",
+        "node_modules\\jade-lint\\lib\\cli.js",
+        "node_modules\\jade-lint\\lib\\config-file.js",
+        "node_modules\\jade-lint\\lib\\errors.js",
+        "node_modules\\jade-lint\\lib\\jade-file.js",
+        "node_modules\\jade-lint\\lib\\linter.js",
+        "node_modules\\jade-lint\\lib\\reporters\\console.js",
+        "node_modules\\jade-lint\\lib\\reporters\\inline.js",
+        "node_modules\\jade-lint\\lib\\rules\\disallow-attribute-concatenation.js",
+        "node_modules\\jade-lint\\lib\\rules\\disallow-attribute-interpolation.js",
+        "node_modules\\jade-lint\\lib\\rules\\disallow-block-expansion.js",
+        "node_modules\\jade-lint\\lib\\rules\\disallow-class-literals-before-attributes.js",
+        "node_modules\\jade-lint\\lib\\rules\\disallow-class-literals-before-id-literals.js",
+        "node_modules\\jade-lint\\lib\\rules\\disallow-class-literals.js",
+        "node_modules\\jade-lint\\lib\\rules\\disallow-duplicate-attributes.js",
+        "node_modules\\jade-lint\\lib\\rules\\disallow-html-text.js",
+        "node_modules\\jade-lint\\lib\\rules\\disallow-id-literals-before-attributes.js",
+        "node_modules\\jade-lint\\lib\\rules\\disallow-id-literals.js",
+        "node_modules\\jade-lint\\lib\\rules\\disallow-implicit-div.js",
+        "node_modules\\jade-lint\\lib\\rules\\disallow-multiple-line-breaks.js",
+        "node_modules\\jade-lint\\lib\\rules\\disallow-space-after-code-operator.js",
+        "node_modules\\jade-lint\\lib\\rules\\disallow-spaces-inside-attribute-brackets.js",
+        "node_modules\\jade-lint\\lib\\rules\\disallow-specific-attributes.js",
+        "node_modules\\jade-lint\\lib\\rules\\disallow-specific-tags.js",
+        "node_modules\\jade-lint\\lib\\rules\\disallow-string-concatenation.js",
+        "node_modules\\jade-lint\\lib\\rules\\disallow-string-interpolation.js",
+        "node_modules\\jade-lint\\lib\\rules\\disallow-tag-interpolation.js",
+        "node_modules\\jade-lint\\lib\\rules\\maximum-number-of-lines.js",
+        "node_modules\\jade-lint\\lib\\rules\\require-class-literals-before-attributes.js",
+        "node_modules\\jade-lint\\lib\\rules\\require-class-literals-before-id-literals.js",
+        "node_modules\\jade-lint\\lib\\rules\\require-id-literals-before-attributes.js",
+        "node_modules\\jade-lint\\lib\\rules\\require-line-feed-at-file-end.js",
+        "node_modules\\jade-lint\\lib\\rules\\require-lower-case-attributes.js",
+        "node_modules\\jade-lint\\lib\\rules\\require-lower-case-tags.js",
+        "node_modules\\jade-lint\\lib\\rules\\require-space-after-code-operator.js",
+        "node_modules\\jade-lint\\lib\\rules\\require-spaces-inside-attribute-brackets.js",
+        "node_modules\\jade-lint\\lib\\rules\\require-specific-attributes.js",
+        "node_modules\\jade-lint\\lib\\rules\\require-strict-equality-operators.js",
+        "node_modules\\jade-lint\\lib\\rules\\validate-attribute-quote-marks.js",
+        "node_modules\\jade-lint\\lib\\rules\\validate-attribute-separator.js",
+        "node_modules\\jade-lint\\lib\\rules\\validate-indentation.js",
+        "node_modules\\jade-lint\\lib\\rules\\validate-line-breaks.js",
+        "node_modules\\jade-lint\\lib\\rules\\validate-self-closing-tags.js",
+        "node_modules\\jade-lint\\lib\\utils.js",
+        "node_modules\\jade-lint\\node_modules\\commander\\index.js",
+        "node_modules\\jade-lint\\node_modules\\commander\\node_modules\\graceful-readlink\\index.js",
+        "node_modules\\jade-lint\\node_modules\\css-selector-parser\\index.js",
+        "node_modules\\jade-lint\\node_modules\\css-selector-parser\\lib\\css-selector-parser.js",
+        "node_modules\\jade-lint\\node_modules\\glob\\common.js",
+        "node_modules\\jade-lint\\node_modules\\glob\\glob.js",
+        "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\inflight\\inflight.js",
+        "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\inflight\\node_modules\\wrappy\\wrappy.js",
+        "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\inflight\\test.js",
+        "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\inherits\\inherits.js",
+        "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\inherits\\inherits_browser.js",
+        "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\inherits\\test.js",
+        "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\once\\node_modules\\wrappy\\wrappy.js",
+        "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\once\\once.js",
+        "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\path-is-absolute\\index.js",
+        "node_modules\\jade-lint\\node_modules\\glob\\sync.js",
+        "node_modules\\jade-lint\\node_modules\\jade-error\\index.js",
+        "node_modules\\jade-lint\\node_modules\\jade-lexer\\index.js",
+        "node_modules\\jade-lint\\node_modules\\jade-lexer\\node_modules\\character-parser\\index.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\docs\\scripts\\linenumber.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\docs\\scripts\\prettify\\lang-css.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\docs\\scripts\\prettify\\prettify.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\minify.json.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\bundles\\codemirror.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\bundles\\core-bundle.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\codemirror.markpopovertext.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\plato-file.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\plato-overview.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\plato-sortable-file-list.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\bootstrap-popover.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\bootstrap-tooltip.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\codemirror.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\javascript.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\util\\closetag.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\util\\colorize.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\util\\continuecomment.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\util\\continuelist.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\util\\dialog.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\util\\foldcode.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\util\\formatting.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\util\\javascript-hint.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\util\\loadmode.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\util\\match-highlighter.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\util\\matchbrackets.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\util\\multiplex.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\util\\overlay.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\util\\pig-hint.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\util\\runmode-standalone.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\util\\runmode.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\util\\search.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\util\\searchcursor.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\util\\simple-hint.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\codemirror\\util\\xml-hint.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\jquery-1.8.3.min.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\jquery.fittext.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\lodash.min.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\morris.min.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\assets\\scripts\\vendor\\raphael-min.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\files\\minify_json_js\\report.history.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\files\\minify_json_js\\report.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\report.history.js",
+        "node_modules\\jade-lint\\node_modules\\jsonminify\\report\\report.js",
+        "node_modules\\jade-lint\\node_modules\\minimatch\\minimatch.js",
+        "node_modules\\jade-lint\\node_modules\\minimatch\\node_modules\\brace-expansion\\example.js",
+        "node_modules\\jade-lint\\node_modules\\minimatch\\node_modules\\brace-expansion\\index.js",
+        "node_modules\\jade-lint\\node_modules\\minimatch\\node_modules\\brace-expansion\\node_modules\\balanced-match\\example.js",
+        "node_modules\\jade-lint\\node_modules\\minimatch\\node_modules\\brace-expansion\\node_modules\\balanced-match\\index.js",
+        "node_modules\\jade-lint\\node_modules\\minimatch\\node_modules\\brace-expansion\\node_modules\\concat-map\\example\\map.js",
+        "node_modules\\jade-lint\\node_modules\\minimatch\\node_modules\\brace-expansion\\node_modules\\concat-map\\index.js",
+        "node_modules\\jade-lint\\node_modules\\void-elements\\index.js",
+        "node_modules\\jade-lint\\node_modules\\void-elements\\pre-publish.js",
+        "node_modules\\jadelint\\node_modules\\chalk\\index.js",
+        "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\ansi-styles\\index.js",
+        "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\escape-string-regexp\\index.js",
+        "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\has-ansi\\index.js",
+        "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\has-ansi\\node_modules\\ansi-regex\\index.js",
+        "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\strip-ansi\\index.js",
+        "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\strip-ansi\\node_modules\\ansi-regex\\index.js",
+        "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\supports-color\\index.js",
+        "node_modules\\jadelint\\node_modules\\fs-readdir-recursive\\index.js",
+        "node_modules\\jadelint\\node_modules\\jade-lexer\\index.js",
+        "node_modules\\jadelint\\node_modules\\jade-lexer\\node_modules\\character-parser\\index.js",
+        "node_modules\\jadelint\\node_modules\\jade-parser\\index.js",
+        "node_modules\\jadelint\\node_modules\\jade-parser\\lib\\inline-tags.js",
+        "node_modules\\jadelint\\node_modules\\jade-parser\\node_modules\\token-stream\\index.js",
+        "node_modules\\jadelint\\node_modules\\log-symbols\\index.js",
+        "node_modules\\jadelint\\node_modules\\text-table\\example\\align.js",
+        "node_modules\\jadelint\\node_modules\\text-table\\example\\center.js",
+        "node_modules\\jadelint\\node_modules\\text-table\\example\\dotalign.js",
+        "node_modules\\jadelint\\node_modules\\text-table\\example\\doubledot.js",
+        "node_modules\\jadelint\\node_modules\\text-table\\example\\table.js",
+        "node_modules\\jadelint\\node_modules\\text-table\\index.js",
+        "node_modules\\jadelint\\target\\jadelint.js",
+        "node_modules\\jadelint\\target\\Linter.js",
+        "node_modules\\jadelint\\target\\LintError.js",
+        "node_modules\\jadelint\\target\\Reporter.js",
+        "node_modules\\jadelint\\target\\Rule.js",
+        "node_modules\\jadelint\\target\\rules\\AddDeferForAsyncScripts.js",
+        "node_modules\\jadelint\\target\\rules\\AddMaxToProgress.js",
+        "node_modules\\jadelint\\target\\rules\\AddMinAndMaxToMeter.js",
+        "node_modules\\jadelint\\target\\rules\\AddTitleToAlternateStylesheets.js",
+        "node_modules\\jadelint\\target\\rules\\AddTitleToInputWithPattern.js",
+        "node_modules\\jadelint\\target\\rules\\AddValueToSubmit.js",
+        "node_modules\\jadelint\\target\\rules\\DontLinkToFavicon.js",
+        "node_modules\\jadelint\\target\\rules\\DontQuoteQTags.js",
+        "node_modules\\jadelint\\target\\rules\\DontUseBTags.js",
+        "node_modules\\jadelint\\target\\rules\\DontUseHgroup.js",
+        "node_modules\\jadelint\\target\\rules\\DontUseITags.js",
+        "node_modules\\jadelint\\target\\rules\\DontUseLegacyEncoding.js",
+        "node_modules\\jadelint\\target\\rules\\DontUsePlaintextInBlockquote.js",
+        "node_modules\\jadelint\\target\\rules\\DontUseSTags.js",
+        "node_modules\\jadelint\\target\\rules\\DontUseUTags.js",
+        "node_modules\\jadelint\\target\\rules\\FirstChildOfFieldsetIsLegend.js",
+        "node_modules\\jadelint\\target\\rules\\HTMLRootRequiresLang.js",
+        "node_modules\\jadelint\\target\\rules\\index.js",
+        "node_modules\\jadelint\\target\\rules\\NoAttributeWhitespace.js",
+        "node_modules\\jadelint\\target\\rules\\NoXMLAttributeNamespace.js",
+        "node_modules\\jadelint\\target\\rules\\NoXMLTagNamespace.js",
+        "node_modules\\jadelint\\target\\rules\\OmitTypeForCSS.js",
+        "node_modules\\jadelint\\target\\rules\\OmitTypeForJS.js",
+        "node_modules\\jadelint\\target\\rules\\OnlyHTMLDoctype.js",
+        "node_modules\\jadelint\\target\\rules\\PreferStrongNativeSemantics.js",
+        "node_modules\\jadelint\\target\\rules\\RequireStatementInCodeBock.js",
+        "node_modules\\jadelint\\target\\rules\\UseFigcaptionAtStartOrEnd.js",
+        "node_modules\\jadelint\\target\\rules\\UseTitleForAbbr.js",
+        "node_modules\\jadelint\\target\\rules\\UseTypeForOl.js",
+        "node_modules\\jadelint\\target\\rules\\UseUTF8.js",
+        "node_modules\\loophole\\lib\\loophole.js"
+      ]
+    },
+    "folders": [
+      {
+        "paths": [
+          "lib",
+          "lib\\linters",
+          ""
+        ],
+        "dependencies": {
+          "jade": "^1.11.0",
+          "jade-lint": "^1.2.6",
+          "jadelint": "^0.2.6",
+          "loophole": "^1.1.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade",
+          "node_modules\\jade\\bin",
+          "node_modules\\jade\\lib",
+          "node_modules\\jade\\lib\\nodes"
+        ],
+        "dependencies": {
+          "character-parser": "1.2.1",
+          "clean-css": "^3.1.9",
+          "commander": "~2.6.0",
+          "constantinople": "~3.0.1",
+          "jstransformer": "0.0.2",
+          "mkdirp": "~0.5.0",
+          "transformers": "2.1.0",
+          "uglify-js": "^2.4.19",
+          "void-elements": "~2.0.1",
+          "with": "~4.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\clean-css",
+          "node_modules\\jade\\node_modules\\clean-css\\lib",
+          "node_modules\\jade\\node_modules\\clean-css\\lib\\colors",
+          "node_modules\\jade\\node_modules\\clean-css\\lib\\imports",
+          "node_modules\\jade\\node_modules\\clean-css\\lib\\properties",
+          "node_modules\\jade\\node_modules\\clean-css\\lib\\selectors",
+          "node_modules\\jade\\node_modules\\clean-css\\lib\\source-maps",
+          "node_modules\\jade\\node_modules\\clean-css\\lib\\stringifier",
+          "node_modules\\jade\\node_modules\\clean-css\\lib\\text",
+          "node_modules\\jade\\node_modules\\clean-css\\lib\\tokenizer",
+          "node_modules\\jade\\node_modules\\clean-css\\lib\\urls",
+          "node_modules\\jade\\node_modules\\clean-css\\lib\\utils"
+        ],
+        "dependencies": {
+          "commander": "2.8.x",
+          "source-map": "0.4.x"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\clean-css\\node_modules\\commander"
+        ],
+        "dependencies": {
+          "graceful-readlink": ">= 1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\build",
+          "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\lib\\source-map",
+          "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map\\lib",
+          "node_modules\\jade\\node_modules\\clean-css\\node_modules\\source-map"
+        ],
+        "dependencies": {
+          "amdefine": ">=0.0.4"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\constantinople",
+          "node_modules\\jade\\node_modules\\constantinople\\test"
+        ],
+        "dependencies": {
+          "acorn": "^2.1.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\jstransformer"
+        ],
+        "dependencies": {
+          "is-promise": "^2.0.0",
+          "promise": "^6.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\jstransformer\\node_modules\\promise",
+          "node_modules\\jade\\node_modules\\jstransformer\\node_modules\\promise\\lib"
+        ],
+        "dependencies": {
+          "asap": "~1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\mkdirp\\bin",
+          "node_modules\\jade\\node_modules\\mkdirp\\examples",
+          "node_modules\\jade\\node_modules\\mkdirp",
+          "node_modules\\jade\\node_modules\\mkdirp\\test"
+        ],
+        "dependencies": {
+          "minimist": "0.0.8"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\transformers\\lib",
+          "node_modules\\jade\\node_modules\\transformers"
+        ],
+        "dependencies": {
+          "promise": "~2.0",
+          "css": "~1.0.8",
+          "uglify-js": "~2.2.5"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\transformers\\node_modules\\css"
+        ],
+        "dependencies": {
+          "css-parse": "1.0.4",
+          "css-stringify": "1.0.5"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\transformers\\node_modules\\promise"
+        ],
+        "dependencies": {
+          "is-promise": "~1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\lib",
+          "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js",
+          "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\test\\compress",
+          "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\test",
+          "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\tools"
+        ],
+        "dependencies": {
+          "source-map": "~0.1.7",
+          "optimist": "~0.3.5"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\example",
+          "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist",
+          "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\test",
+          "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\optimist\\test\\_"
+        ],
+        "dependencies": {
+          "wordwrap": "~0.0.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\build",
+          "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\lib\\source-map",
+          "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\lib",
+          "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map",
+          "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\test",
+          "node_modules\\jade\\node_modules\\transformers\\node_modules\\uglify-js\\node_modules\\source-map\\test\\source-map"
+        ],
+        "dependencies": {
+          "amdefine": ">=0.0.4"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\uglify-js\\bin",
+          "node_modules\\jade\\node_modules\\uglify-js\\lib",
+          "node_modules\\jade\\node_modules\\uglify-js",
+          "node_modules\\jade\\node_modules\\uglify-js\\tools"
+        ],
+        "dependencies": {
+          "async": "~0.2.6",
+          "source-map": "~0.5.1",
+          "uglify-to-browserify": "~1.0.0",
+          "yargs": "~3.10.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs",
+          "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\lib"
+        ],
+        "dependencies": {
+          "camelcase": "^1.0.2",
+          "cliui": "^2.1.0",
+          "decamelize": "^1.0.0",
+          "window-size": "0.1.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui",
+          "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\test"
+        ],
+        "dependencies": {
+          "center-align": "^0.1.1",
+          "right-align": "^0.1.1",
+          "wordwrap": "0.0.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align"
+        ],
+        "dependencies": {
+          "align-text": "^0.1.3",
+          "lazy-cache": "^1.0.3"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\node_modules\\align-text"
+        ],
+        "dependencies": {
+          "kind-of": "^3.0.2",
+          "longest": "^1.0.1",
+          "repeat-string": "^1.5.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\center-align\\node_modules\\align-text\\node_modules\\kind-of"
+        ],
+        "dependencies": {
+          "is-buffer": "^1.0.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\right-align"
+        ],
+        "dependencies": {
+          "align-text": "^0.1.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\right-align\\node_modules\\align-text"
+        ],
+        "dependencies": {
+          "kind-of": "^3.0.2",
+          "longest": "^1.0.1",
+          "repeat-string": "^1.5.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\uglify-js\\node_modules\\yargs\\node_modules\\cliui\\node_modules\\right-align\\node_modules\\align-text\\node_modules\\kind-of"
+        ],
+        "dependencies": {
+          "is-buffer": "^1.0.2"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\with"
+        ],
+        "dependencies": {
+          "acorn": "^1.0.1",
+          "acorn-globals": "^1.0.3"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade\\node_modules\\with\\node_modules\\acorn-globals"
+        ],
+        "dependencies": {
+          "acorn": "^2.1.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade-lint\\lib",
+          "node_modules\\jade-lint\\lib\\reporters",
+          "node_modules\\jade-lint\\lib\\rules",
+          "node_modules\\jade-lint",
+          "node_modules\\jade-lint\\presets"
+        ],
+        "dependencies": {
+          "commander": "^2.8.1",
+          "css-selector-parser": "^1.1.0",
+          "glob": "^5.0.15",
+          "jade-error": "^1.1.1",
+          "jade-lexer": "^0.0.8",
+          "jsonminify": "^0.2.3",
+          "minimatch": "^3.0.0",
+          "void-elements": "^2.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade-lint\\node_modules\\commander"
+        ],
+        "dependencies": {
+          "graceful-readlink": ">= 1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade-lint\\node_modules\\glob"
+        ],
+        "dependencies": {
+          "inflight": "^1.0.4",
+          "inherits": "2",
+          "minimatch": "2 || 3",
+          "once": "^1.3.0",
+          "path-is-absolute": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\inflight"
+        ],
+        "dependencies": {
+          "once": "^1.3.0",
+          "wrappy": "1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\once",
+          "node_modules\\jade-lint\\node_modules\\glob\\node_modules\\once\\test"
+        ],
+        "dependencies": {
+          "wrappy": "1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade-lint\\node_modules\\jade-lexer",
+          "node_modules\\jade-lint\\node_modules\\jade-lexer\\test\\cases",
+          "node_modules\\jade-lint\\node_modules\\jade-lexer\\test"
+        ],
+        "dependencies": {
+          "character-parser": "^1.2.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade-lint\\node_modules\\minimatch"
+        ],
+        "dependencies": {
+          "brace-expansion": "^1.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jade-lint\\node_modules\\minimatch\\node_modules\\brace-expansion"
+        ],
+        "dependencies": {
+          "balanced-match": "^0.2.0",
+          "concat-map": "0.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jadelint",
+          "node_modules\\jadelint\\target",
+          "node_modules\\jadelint\\target\\rules"
+        ],
+        "dependencies": {
+          "chalk": "^1.1.0",
+          "fs-readdir-recursive": "^0.1.2",
+          "jade-lexer": "0.0.8",
+          "jade-parser": "0.0.8",
+          "log-symbols": "^1.0.2",
+          "text-table": "^0.2.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jadelint\\node_modules\\chalk"
+        ],
+        "dependencies": {
+          "ansi-styles": "^2.2.1",
+          "escape-string-regexp": "^1.0.2",
+          "has-ansi": "^2.0.0",
+          "strip-ansi": "^3.0.0",
+          "supports-color": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\has-ansi"
+        ],
+        "dependencies": {
+          "ansi-regex": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jadelint\\node_modules\\chalk\\node_modules\\strip-ansi"
+        ],
+        "dependencies": {
+          "ansi-regex": "^2.0.0"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jadelint\\node_modules\\jade-lexer",
+          "node_modules\\jadelint\\node_modules\\jade-lexer\\test\\cases",
+          "node_modules\\jadelint\\node_modules\\jade-lexer\\test"
+        ],
+        "dependencies": {
+          "character-parser": "^1.2.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jadelint\\node_modules\\jade-parser",
+          "node_modules\\jadelint\\node_modules\\jade-parser\\lib",
+          "node_modules\\jadelint\\node_modules\\jade-parser\\test\\cases",
+          "node_modules\\jadelint\\node_modules\\jade-parser\\test"
+        ],
+        "dependencies": {
+          "token-stream": "0.0.1"
+        }
+      },
+      {
+        "paths": [
+          "node_modules\\jadelint\\node_modules\\log-symbols"
+        ],
+        "dependencies": {
+          "chalk": "^1.0.0"
+        }
+      }
+    ]
+  }
+}
